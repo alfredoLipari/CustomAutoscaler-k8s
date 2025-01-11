@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: load-tester
+spec:
+  template:
+    spec:
+      containers:
+      - name: load-tester
+        image: europe-west8-docker.pkg.dev/opendraw/opendraw-ita-repo/load-tester:v12
+        # Make sure workload_generator.py uses the internal service URL like:
+        # "http://cpu-intensive-app.fastapi-app.svc.cluster.local"
+        command: ["python", "workload_simulator.py"]
+      restartPolicy: Never
