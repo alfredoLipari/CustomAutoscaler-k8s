@@ -190,6 +190,7 @@ The autoscaler logs detailed information about:
 - Prediction accuracy
 
 Monitor logs with:
+
 ```bash
 tail -f autoscaler_TIMESTAMP.log
 ```
@@ -238,6 +239,7 @@ The system can be extended to use additional metrics:
 ## Citation
 
 If you use this code in your research, please cite the original paper:
+
 ```
 @article{rl_autoscaler_2025,
   title={Reinforcement Learning-Based Autoscaler with LSTM Workload Prediction},
